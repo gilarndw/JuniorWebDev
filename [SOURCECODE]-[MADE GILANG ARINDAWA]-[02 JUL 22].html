@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LSP Teknologi Digital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("img/bg_head.jpg");
+      min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    </style>
+  </head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <img src="img/logo-lsptd.png" alt="LSP" class="w3-left" style="width: 65px;">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">LSP Teknologi Digital</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">PROFIL<i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Lembaga Sertifikasi Profesi</a>
+          <a href="#" class="w3-bar-item w3-button">Visi & Misi</a>
+          <a href="#" class="w3-bar-item w3-button">Organisasi</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">SERTIFIKASI<i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Skema Sertifikasi</a>
+          <a href="#" class="w3-bar-item w3-button">Uji Kompetensi</a>
+          <a href="#" class="w3-bar-item w3-button">Jadwal Asesmen</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">MEDIA<i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Instagram</a>
+          <a href="#" class="w3-bar-item w3-button">Twitter</a>
+          <a href="#" class="w3-bar-item w3-button">Youtube</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">INFORMASI<i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Lembaga</a>
+          <a href="#" class="w3-bar-item w3-button">FAQ</a>
+          <a href="#" class="w3-bar-item w3-button">Event</a>
+        </div>
+      </div>
+
+      <a href="#" class="w3-bar-item w3-button"> REGISTRASI</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <button class="w3-button w3-block w3-left-align" onclick="AccFunc('profil')"> PROFIL <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="profil" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">Lembaga Sertifikasi</a>
+    <a href="#" class="w3-bar-item w3-button">Visi & Misi</a>
+    <a href="#" class="w3-bar-item w3-button">Organisasi</a>
+  </div>
+  <button class="w3-button w3-block w3-left-align" onclick="AccFunc('sertif')"> SERTIFIKASI <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="sertif" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">Skema Sertifikasi</a>
+    <a href="#" class="w3-bar-item w3-button">Uji Kompetensi</a>
+    <a href="#" class="w3-bar-item w3-button">Jadwal Asesmen</a>
+  </div>
+  <button class="w3-button w3-block w3-left-align" onclick="AccFunc('media')"> MEDIA <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="media" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">Instagram</a>
+    <a href="#" class="w3-bar-item w3-button">Twitter</a>
+    <a href="#" class="w3-bar-item w3-button">Youtube</a>
+  </div>
+  <button class="w3-button w3-block w3-left-align" onclick="AccFunc('info')"> INFORMASI <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="info" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">Lembaga</a>
+    <a href="#" class="w3-bar-item w3-button">FAQ</a>
+    <a href="#" class="w3-bar-item w3-button">Event</a>
+  </div>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">REGISTRASI</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center" style="padding:48px">
+    <span class="w3-xxlarge w3-hide-small">Kompeten, Profesional, Inovatif</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Kompeten, Profesional, Inovatif</span><br>
+    <span class="w3-large">Tingkatkan diri anda pada sertifikasi profesi yang tersedia</span>
+    <p><a href="#daftar" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">DAFTAR SEKARANG</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 128px" id="about">
+  <h3 class="w3-center">LEMBAGA SERTIFIKASI PROFESI</h3>
+  <p class="w3-center w3-large">Mengapa kami?</p>
+  <p class="w3-center w3-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+  </p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-third">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">36 Skema Sertifikasi</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <a href="#" class="w3-text-blue w3-hover-text-blue-grey" style="text-decoration:none">Jadwal Sertifikasi</a>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-print w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">300+ Link DUDI</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <a href="#" class="w3-text-blue w3-hover-text-blue-grey" style="text-decoration:none">Lowongan Pekerjaan</a>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-male w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">1000+ SDM Tersertifikasi</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <a href="#" class="w3-text-blue w3-hover-text-blue-grey" style="text-decoration:none">Mencari Talenta</a>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="daftar">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>DAFTAR SEKARANG</h3>
+      <form action="/action_page.php" target="_blank" class="w3-container">
+        <select class="w3-select w3-margin-bottom" name="skema">
+            <option value="" disabled selected>Pilih Skema Sertifikasi</option>
+            <option value="1">Junior Web Developer</option>
+            <option value="2">Digital Marketing</option>
+            <option value="3">Human Resource</option>
+          </select>
+          <select class="w3-select w3-margin-bottom" name="provinsi">
+            <option value="" disabled selected>Pilih Provinsi</option>
+            <option value="1">DKI Jakarta</option>
+            <option value="2">Jawa Tengah</option>
+            <option value="3">Jawa Barat</option>
+          </select>
+
+          <p><a href="#" class="w3-button w3-black"><i class="fa fa-search"> </i>Cari Jadwal</a></p>
+      </form>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="img/bg_work.jpg" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">TESTIMONI</h3>
+  <p class="w3-center w3-large">Kumpulan testimoni peserta sertifikasi LSP</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Anja Doe</h3>
+          <p class="w3-opacity">Art Director</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Web Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>Dan Star</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">Kontak Kami</h3>
+  <p class="w3-center w3-large">Untuk informasi lebih lanjut hubungi kami:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Jakarta, Indonesia</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +62 81234567890</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </div>
+  <div class="w3-center w3-margin">
+    <h3>Lokasi kami:</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37737.66468500708!2d106.80592012903796!3d-6.173141207230555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sNational%20Monument!5e0!3m2!1sen!2sid!4v1656704174522!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Kembali ke atas</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+ <p class="w3-small">Website ini dibuat oleh Made Gilang Arindawa</p>
+</footer>
+ 
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+function AccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
